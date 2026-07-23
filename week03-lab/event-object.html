@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="th">
+<body>
+
+<input type="text" id="nameInput" placeholder="พิมพ์อะไรก็ได้..." />
+<p id="show"></p>
+
+<script>
+const input = document.getElementById("nameInput");
+const show = document.getElementById("show");
+
+input.addEventListener("input", function(event) {
+  // event.target = element ต้นเหตุ, .value = ค่าที่พิมพ์อยู่ตอนนี้
+  show.textContent = "คุณพิมพ์: " + event.target.value;
+});
+
+input.addEventListener("keydown", function(event) {
+  console.log("ปุ่มที่กด:", event.key);   // เช่น "a", "Enter", "Backspace"
+});
+</script>
+
+</body>
+</html>
